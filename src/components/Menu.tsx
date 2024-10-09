@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const menuItems = [
   {
     title: "MENU",
@@ -115,7 +118,19 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <div className="mt-4 text-sm">
+      {menuItems.map(menu => (
+        <div className="flex flex-col gap-2" key={menu.title}>
+          <span className="hidden lg:block text-gray-400 font-light my-4">{menu.title}</span>
+          {menu.items.map(item => (
+            <Link href={item.href} className={`flex gap-x-2   hover:ease-in p-2 rounded-md font-medium  hover:font-bold hover:transition-all hover:duration-200 items-center justify-center lg:justify-start py-1 ${item.label === 'Logout' ? 'text-red-500 hover:bg-red-200' : 'text-gray-500 hover:bg-blue-200 hover:text-blue-700'}`} key={item.label}>
+              <Image src={item.icon} alt="" width={20} height={20} />
+              <span className="hidden lg:block text-xs ">{item.label}</span>
+            </Link>
+          ))}
+        </div>
+      ))}
+    </div>
   )
 }
 
