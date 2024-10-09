@@ -2,7 +2,7 @@ import CountChart from "@/components/CountChart"
 import UserCard from "@/components/UserCard"
 import React from "react"
 
-const AdminPage = ({ type }: { type: string }) => {
+const AdminPage = () => {
     return (
         <div className="flex flex-col md:flex-row p-4 gap-4">
             {/* LEFT SIDE */}
@@ -22,7 +22,7 @@ const AdminPage = ({ type }: { type: string }) => {
                 </div>
                 {/* BOTTOM CHART */}
                 <div className="w-full lg:w-2/3 h-[450px]">
-
+                    
                 </div>
             </div>
             {/* RIGHT SIDE */}

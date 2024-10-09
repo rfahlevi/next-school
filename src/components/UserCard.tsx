@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export const UserCard = ({ type }: { type: String }) => (
+export const UserCard = ({ type } : { type: String }) => (
     <div className="rounded-2xl odd:bg-blue-600 even:bg-yellow-400 odd:text-white p-4 flex-1 min-w-[130px]">
       <div className="flex justify-between items-center">
         <span className="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">

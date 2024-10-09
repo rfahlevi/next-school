@@ -5,66 +5,57 @@ import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts
 
 const data = [
     {
-        name: '18-24',
-        uv: 31.47,
-        pv: 2400,
-        fill: '#8884d8',
+        name: 'Total',
+        count: 100,
+        fill: '#FFF',
     },
     {
-        name: '25-29',
-        uv: 26.69,
-        pv: 4567,
-        fill: '#83a6ed',
+        name: 'Girl',
+        count: 50,
+        fill: '#FBBF24',
     },
     {
-        name: '30-34',
-        uv: 15.69,
-        pv: 1398,
-        fill: '#8dd1e1',
+        name: 'Boys',
+        count: 50,
+        fill: '#2563EB',
     },
-    {
-        name: '35-39',
-        uv: 8.22,
-        pv: 9800,
-        fill: '#82ca9d',
-    },
-    {
-        name: '40-49',
-        uv: 8.63,
-        pv: 3908,
-        fill: '#a4de6c',
-    },
-    {
-        name: '50+',
-        uv: 2.63,
-        pv: 4800,
-        fill: '#d0ed57',
-    },
-    {
-        name: 'unknow',
-        uv: 6.67,
-        pv: 4800,
-        fill: '#ffc658',
-    },
+    
 ];
 
-const style = {
-  top: '50%',
-  right: 0,
-  transform: 'translate(0, -50%)',
-  lineHeight: '24px',
-};
 
 export const CountChart = () => {
     return (
         <div className='bg-white rounded-xl p-4'>
             {/* TITLE */}
             <div className='flex justify-between items-center'>
-                <span className='font-bold text-lg'>Students</span>
-                <Image  src="/moreDark.png" alt='' width={14} height={14}/>
+                <h1 className='font-bold text-lg'>Students</h1>
+                <Image src="/moreDark.png" alt='' width={14} height={14} />
             </div>
             {/* CHART */}
+            <div className=' relative flex flex-col justify-center w-full h-60'>
+                <ResponsiveContainer width="100%" height="100%">
+                    <RadialBarChart cx="50%" cy="50%" innerRadius="40%" outerRadius="100%" barSize={32} data={data}>
+                        <RadialBar
+                            background
+                            dataKey="count"
+                        />
+                    </RadialBarChart>
+                </ResponsiveContainer>
+                <Image src="/maleFemale.png" alt='' width={50} height={50} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'/>
+            </div>
             {/* BOTTOM */}
+            <div className='flex justify-evenly'>
+                <div className='flex flex-col gap-1 justify-center items-center'>
+                    <div className="w-5 h-5 rounded-full bg-blue-200" />
+                    <h1 className='font-bold'>1,234</h1>
+                    <h2 className='text-xs text-gray-500'>Boys (55%)</h2>
+                </div>
+                <div className='flex flex-col gap-1 justify-center items-center'>
+                    <div className="w-5 h-5 rounded-full bg-yellow-200" />
+                    <h1 className='font-bold'>983</h1>
+                    <h2 className='text-xs text-gray-500'>Girls (45%)</h2>
+                </div>
+            </div>
         </div>
     )
 }
