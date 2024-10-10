@@ -13,11 +13,10 @@ export const UserCard = ({ type }: { type: String }) => (
     </div>
     <CountUp start={0} end={Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000}
       duration={3}
+      delay={0}
       useEasing={true}
     >
-      {({ countUpRef }) => (
-        <h1 className="text-2xl font-semibold my-4"><span ref={countUpRef} /></h1>
-      )}
+      {({ countUpRef }) => <h1 className="text-2xl font-semibold my-4"><span ref={countUpRef} /></h1>}
     </CountUp>
     <h2 className="capitalize text-sm font-medium ">{type}s</h2>
   </div>
