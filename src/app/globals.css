@@ -22,3 +22,25 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter" sans-serif !important;
+}
+
+.react-calendar__tile--now {
+  background: #fbbf24 !important;
+  border-radius: 4px;
+}
+
+.react-calendar__tile--active {
+  background: #2563eb;
+  color: white;
+  border-radius: 4px;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+  font-size: 14px;
+}
