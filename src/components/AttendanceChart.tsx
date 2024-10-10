@@ -58,10 +58,10 @@ export const AttendanceChart = () => {
                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke='#ddd' />
                         <XAxis dataKey="name" fontSize={12} axisLine={false} tick={{ fill:"#d1d5db" }} tickLine={false} />
                         <YAxis fontSize={12} axisLine={false} tick={{ fill:"#d1d5db" }} tickLine={false} />
-                        <Tooltip contentStyle={{ borderRadius:"10px", borderColor:"lightgray" }}/>
-                        <Legend align='left' verticalAlign='top' wrapperStyle={{ paddingTop:"20px", paddingBottom:"40px", textTransform:"capitalize" }}/>
-                        <Bar dataKey="present" fill="#2563EB" legendType='circle' radius={[10, 10, 0, 0]} />
-                        <Bar dataKey="absent" fill="#FBBF24" legendType='circle' radius={[10, 10, 0, 0]} />
+                        <Tooltip contentStyle={{ borderRadius:"10px", borderColor:"lightgray", fontSize:"12px", fontWeight:"500", textTransform:"capitalize" }}/>
+                        <Legend align='left' verticalAlign='top' wrapperStyle={{ paddingTop:"20px", paddingBottom:"40px", textTransform:"capitalize", fontSize:"14px", fontWeight:"500" }}/>
+                        <Bar dataKey="present" fill="#2563EB" legendType='circle' radius={[10, 10, 0, 0]} animationDuration={3000} animationEasing='ease' />
+                        <Bar dataKey="absent" fill="#FBBF24" legendType='circle' radius={[10, 10, 0, 0]} animationDuration={3000} animationEasing='ease' />
                     </BarChart>
                 </ResponsiveContainer>
             </div>

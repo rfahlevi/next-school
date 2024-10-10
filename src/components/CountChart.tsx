@@ -38,6 +38,8 @@ export const CountChart = () => {
                         <RadialBar
                             background
                             dataKey="count"
+                            animationDuration={3000}
+                            animationEasing='ease'
                         />
                     </RadialBarChart>
                 </ResponsiveContainer>
