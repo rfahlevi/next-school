@@ -75,7 +75,7 @@ export const Announcements = () => {
                     <div key={data.id} className='rounded-md p-4 even:bg-blue-600 even:bg-opacity-20 
                 odd:bg-yellow-400 odd:bg-opacity-20'>
                         <div className='flex items-center justify-between'>
-                            <span className='text-sm font-bold'>Class : {data.class}</span>
+                            <span className='text-xs font-bold'>Class : {data.class}</span>
                             <span className='text-[10px] text-gray-500 bg-white p-1 rounded-md'>{data.date}</span>
                         </div>
                         <span className='text-sm'>
