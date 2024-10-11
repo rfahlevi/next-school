@@ -4,6 +4,7 @@ import FinanceChart from "@/components/FinanceChart"
 import UserCard from "@/components/UserCard"
 import EventCalendar from "@/components/EventCalendar"
 import React from "react"
+import Announcements from "@/components/Announcements"
 
 const AdminPage = () => {
     return (
@@ -33,8 +34,13 @@ const AdminPage = () => {
             </div>
             {/* RIGHT SIDE */}
             <div className="w-full lg:w-1/3 flex flex-col gap-4">
+                {/* EVENT CALENDAR */}
                 <div className="bg-white rounded-xl p-4">
                     <EventCalendar />
+                </div>
+                {/* ANNOUNCEMENTS */}
+                <div className="bg-white rounded-xl p-4">
+                    <Announcements/>
                 </div>
             </div>
         </div>

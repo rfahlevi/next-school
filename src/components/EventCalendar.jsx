@@ -104,22 +104,24 @@ export const EventCalendar = () => {
           <h1 className="font-bold text-lg">Events</h1>
           <Image src="/moreDark.png" alt="" width={14} height={14} />
         </div>
-        {eventsData.map((event) => (
-          <div
-            key={event.id}
-            className="bg-white rounded-md p-2 border-gray-100 border border-t-4 even:border-t-blue-600 odd:border-t-yellow-400"
-          >
-            <span className="text-xs font-semibold text-gray-600">
-              {event.date} . {event.startTime} - {event.endTime}
-            </span>
-            <div className="flex items-start justify-between">
-              <h1 className="font-bold text-sm">{event.title}</h1>
-              <div className="flex flex-col items-center justify-end">
-                <span className="text-xs text-gray-500">{event.class}</span>
+        <div className="max-h-[330px] overflow-auto flex flex-col gap-4">
+          {eventsData.map((event) => (
+            <div
+              key={event.id}
+              className="bg-white rounded-md p-2 border-gray-100 border border-t-4 even:border-t-blue-600 even:border-opacity-40 odd:border-t-yellow-400 odd:border-opacity-40"
+            >
+              <span className="text-xs font-semibold text-gray-600">
+                {event.date} . {event.startTime} - {event.endTime}
+              </span>
+              <div className="flex items-start justify-between">
+                <h1 className="font-bold text-sm">{event.title}</h1>
+                <div className="flex flex-col items-center justify-end">
+                  <span className="text-xs text-gray-500">{event.class}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
