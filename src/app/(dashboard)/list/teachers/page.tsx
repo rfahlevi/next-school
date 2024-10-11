@@ -1,10 +1,10 @@
-import CircleButton from '@/components/CircleButton'
-import InputSearch from '@/components/InputSearch'
-import Pagination from '@/components/Pagination'
-import Image from 'next/image'
+import CircleButton from "@/components/CircleButton";
+import InputSearch from "@/components/InputSearch";
+import Pagination from "@/components/Pagination";
+
 import React from 'react'
 
-export const TeacherListPage = () => {
+const TeacherListPage = () => {
     return (
         <div className='m-4 mt-0 p-4 flex-1 flex-col gap-2 bg-white rounded-md'>
             <div className='flex items-center justify-between'>
