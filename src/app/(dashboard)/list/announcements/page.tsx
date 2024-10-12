@@ -36,7 +36,7 @@ const ClassListPage = () => {
     const renderRow = (item: Announcement) => (
         <tr key={item.id} className="border-b border-gray-200 even:bg-[#F7F8FA] cursor-pointer text-sm hover:bg-blue-100 hover:transition-all hover:duration-200">
             <td className="p-4 flex flex-col items-start justify-center">
-                <p className="text-xs text-gray-500">{item.date}</p>
+                <p className="text-xs text-gray-500"    >{item.date}</p>
                 <h3 className="font-semibold">{item.title}</h3>
             </td>
             <td className="hidden md:table-cell">{item.class}</td>
