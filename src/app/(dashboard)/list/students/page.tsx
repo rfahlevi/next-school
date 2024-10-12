@@ -2,21 +2,20 @@ import CircleButton from "@/components/CircleButton";
 import InputSearch from "@/components/InputSearch";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
-import { role, teachersData } from "@/lib/data";
+import { role, studentsData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
 import React from 'react'
 
-type Teacher = {
+type Student = {
     id: number
-    teacherId: string
+    studentId: string
     name: string
-    email?: string
+    class: string
+    grade: number
     photo: string
-    phone: string
-    subjects: string[]
-    classes: string[]
+    phone?: string
     address: string
 }
 
@@ -26,18 +25,13 @@ const columns = [
         accessor: "info",
     },
     {
-        title: "Teacher ID",
-        accessor: "teacherId",
+        title: "Student ID",
+        accessor: "studentId",
         className: "hidden md:table-cell"
     },
     {
-        title: "Subjects",
-        accessor: "subjects",
-        className: "hidden md:table-cell"
-    },
-    {
-        title: "Classes",
-        accessor: "classes",
+        title: "Grade",
+        accessor: "grade",
         className: "hidden md:table-cell"
     },
     {
@@ -57,20 +51,19 @@ const columns = [
     },
 ]
 
-const TeacherListPage = () => {
-    const renderRow = (item:Teacher) => (
-        <tr key={item.id} className="border-b border-gray-200 even:bg-[#F7F8FA] text-sm cursor-pointer hover:bg-blue-100 hover:transition-all hover:duration-200">
+const StudentListPage = () => {
+    const renderRow = (item:Student) => (
+        <tr key={item.id} className="border-b border-gray-200 even:bg-[#F7F8FA] cursor-pointer text-sm hover:bg-blue-100 hover:transition-all hover:duration-200">
             <td className="flex items-center gap-4 p-4">
                 <Image src={item.photo} alt="" width={40} height={40} className="md:hidden xl:block w-10 h-10 rounded-full object-cover" />
                 <div className="flex flex-col ">
                     <h3 className="font-semibold">{item.name}</h3>
-                    <p className="text-sm text-gray-500">{item?.email}</p>
+                    <p className="text-sm text-gray-500">{item.class}</p>
                 </div>
             </td>
-            <td className="hidden md:table-cell">{item.teacherId}</td>
-            <td className="hidden md:table-cell">{item.subjects.join(", ")}</td>
-            <td className="hidden md:table-cell">{item.classes.join(", ")}</td>
-            <td className="hidden lg:table-cell">{item.phone}</td>
+            <td className="hidden md:table-cell">{item.studentId}</td>
+            <td className="hidden md:table-cell">{item.grade}</td>
+            <td className="hidden lg:table-cell">{item?.phone}</td>
             <td className="hidden lg:table-cell">{item.address}</td>
             <td>
                 <div className="flex items-center justify-center gap-2">
@@ -93,19 +86,19 @@ const TeacherListPage = () => {
         <div className='m-4 mt-0 p-4 flex-1 flex-col gap-2 bg-white rounded-md'>
             <div className='flex items-center justify-between'>
                 {/* TITLE */}
-                <h1 className='hidden md:block font-bold'>All Teachers</h1>
+                <h1 className='hidden md:block font-bold'>All Students</h1>
                 <div className="flex flex-col md:flex-row w-full md:w-auto gap-2 md:gap-0">
                     <InputSearch />
                     <div className='flex w-full justify-end gap-2'>
                         <CircleButton src='/filter.png' />
                         <CircleButton src='/sort.png' />
-                        {role === 'admin' && (<CircleButton src='/plus.png' />)}
+                        {role === 'admin' && (<CircleButton src='/plus.png' />)} 
                     </div>
                 </div>
             </div>
             {/* TABLE */}
             <div className="">
-                <Table columns={columns} renderRow={renderRow} data={teachersData} />
+                <Table columns={columns} renderRow={renderRow} data={studentsData} />
             </div>
             {/* PAGINATION */}
             <div className="">
@@ -115,4 +108,4 @@ const TeacherListPage = () => {
     )
 }
 
-export default TeacherListPage
+export default StudentListPage
