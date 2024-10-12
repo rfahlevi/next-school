@@ -1,4 +1,5 @@
 import CircleButton from "@/components/CircleButton";
+import FormModal from "@/components/FormModal";
 import InputSearch from "@/components/InputSearch";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -42,15 +43,11 @@ const ClassListPage = () => {
             <td className="hidden md:table-cell">{item.class}</td>
             <td>
                 <div className="flex items-center justify-center gap-2">
-                    <Link href={`/list/teacher/${item.id}`} >
-                        <button className="w-6 h-6 flex items-center justify-center rounded-full  bg-blue-600 hover:bg-blue-700 hover:transition-all hover:duration-200">
-                            <Image src="/edit.png" alt="" width={16} height={16} className="w-3 h-3" />
-                        </button>
-                    </Link>
                     {role === 'admin' && (
-                        <button className="w-6 h-6 flex items-center justify-center rounded-full  bg-red-500 hover:bg-red-600 hover:transition-all hover:duration-200">
-                            <Image src="/delete.png" alt="" width={16} height={16} className="w-3 h-3" />
-                        </button>
+                        <>
+                            <FormModal table="announcement" type="update" data={item} />
+                            <FormModal table="announcement" type="delete" id={item.id} />
+                        </>
                     )}
                 </div>
             </td>
@@ -67,7 +64,7 @@ const ClassListPage = () => {
                     <div className='flex w-full justify-end gap-2'>
                         <CircleButton src='/filter.png' />
                         <CircleButton src='/sort.png' />
-                        {role === 'admin' && (<CircleButton src='/plus.png' />)}
+                        {role === 'admin' && (<FormModal table="announcement" type="create" />)}
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export const SinglePageTeacher = () => {
+const SinglePageTeacher = () => {
     return (
         <div className='flex flex-1 flex-col lg:flex-row p-4 gap-4'>
             {/* LEFT */}

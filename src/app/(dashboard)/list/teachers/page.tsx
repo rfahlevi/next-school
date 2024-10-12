@@ -1,4 +1,5 @@
 import CircleButton from "@/components/CircleButton";
+import FormModal from "@/components/FormModal";
 import InputSearch from "@/components/InputSearch";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -80,9 +81,10 @@ const TeacherListPage = () => {
                         </button>
                     </Link>
                     {role === 'admin' && (
-                        <button className="w-6 h-6 flex items-center justify-center rounded-full  bg-red-500 hover:bg-red-600 hover:transition-all hover:duration-200">
-                            <Image src="/delete.png" alt="" width={16} height={16} className="w-3 h-3" />
-                        </button>
+                        // <button className="w-6 h-6 flex items-center justify-center rounded-full  bg-red-500 hover:bg-red-600 hover:transition-all hover:duration-200">
+                        //     <Image src="/delete.png" alt="" width={16} height={16} className="w-3 h-3" />
+                        // </button>
+                        <FormModal table="teacher" type="delete" id={item.id} />
                     )}
                 </div>
             </td>
@@ -99,7 +101,7 @@ const TeacherListPage = () => {
                     <div className='flex w-full justify-end gap-2'>
                         <CircleButton src='/filter.png' />
                         <CircleButton src='/sort.png' />
-                        {role === 'admin' && (<CircleButton src='/plus.png' />)}
+                        {role === 'admin' && (<FormModal table="teacher" type="create" />)}
                     </div>
                 </div>
             </div>

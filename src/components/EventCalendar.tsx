@@ -5,6 +5,10 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
+type ValuePiece = Date | null;
+
+type Value = ValuePiece | [ValuePiece, ValuePiece];
+
 export const eventsData = [
   {
     id: 1,
@@ -88,8 +92,8 @@ export const eventsData = [
   },
 ];
 
-export const EventCalendar = () => {
-  const [value, onChange] = useState(new Date());
+const EventCalendar = () => {
+  const [value, onChange] = useState<Value>(new Date());
 
   return (
     <div className="flex flex-col gap-4">
