@@ -1,4 +1,5 @@
 import Image from "next/image"
+import SheetMenu from "./SheetMenu"
 
 const Navbar = () => {
     return (
@@ -8,12 +9,15 @@ const Navbar = () => {
                 <Image src="/search.png" alt="" width={14} height={14} />
                 <input type="text" className="w-[200px] py-2 bg-transparent outline-none" placeholder="Search..."/>
             </div>
+            <div className="block md:hidden">
+                <SheetMenu />
+            </div> 
             {/* ICONS AND USER */}
-            <div className="flex items-center gap-6 justify-end w-full">
-                <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
+            <div className="flex items-center gap-6 justify-end w-full">    
+                <div className="hidden md:flex bg-white rounded-full w-7 h-7 items-center justify-center cursor-pointer">
                     <Image src="/message.png" alt="" width={20} height={20} />
                 </div>
-                <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative">
+                <div className="bg-white rounded-full w-7 h-7 hidden md:flex items-center justify-center cursor-pointer relative">
                     <Image src="/announcement.png" alt="" width={20} height={20} />
                     <div className="absolute -top-[5px] -right-[5px] flex items-center justify-center w-4 h-4 rounded-full bg-purple-700 text-[10px] text-white">1</div>
                 </div>

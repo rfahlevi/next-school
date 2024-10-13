@@ -2,6 +2,121 @@
 
 export let role = "admin";
 
+export const menuItems = [
+  {
+    title: "MENU",
+    items: [
+      {
+        icon: "/home.png",
+        label: "Home",
+        href: "/admin",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/teacher.png",
+        label: "Teachers",
+        href: "/list/teachers",
+        visible: ["admin", "teacher"],
+      },
+      {
+        icon: "/student.png",
+        label: "Students",
+        href: "/list/students",
+        visible: ["admin", "teacher"],
+      },
+      {
+        icon: "/parent.png",
+        label: "Parents",
+        href: "/list/parents",
+        visible: ["admin", "teacher"],
+      },
+      {
+        icon: "/subject.png",
+        label: "Subjects",
+        href: "/list/subjects",
+        visible: ["admin"],
+      },
+      {
+        icon: "/class.png",
+        label: "Classes",
+        href: "/list/classes",
+        visible: ["admin", "teacher"],
+      },
+      {
+        icon: "/lesson.png",
+        label: "Lessons",
+        href: "/list/lessons",
+        visible: ["admin", "teacher"],
+      },
+      {
+        icon: "/exam.png",
+        label: "Exams",
+        href: "/list/exams",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/assignment.png",
+        label: "Assignments",
+        href: "/list/assignments",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/result.png",
+        label: "Results",
+        href: "/list/results",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/attendance.png",
+        label: "Attendance",
+        href: "/list/attendance",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/calendar.png",
+        label: "Events",
+        href: "/list/events",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/message.png",
+        label: "Messages",
+        href: "/list/messages",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/announcement.png",
+        label: "Announcements",
+        href: "/list/announcements",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+    ],
+  },
+  {
+    title: "OTHER",
+    items: [
+      {
+        icon: "/profile.png",
+        label: "Profile",
+        href: "/profile",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/setting.png",
+        label: "Settings",
+        href: "/settings",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/logout.png",
+        label: "Logout",
+        href: "/logout",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+    ],
+  },
+];
+
 export const teachersData = [
   {
     id: 1,
@@ -920,121 +1035,121 @@ export const announcementsData = [
 export const calendarEvents = [
   {
     title: "Math",
-    start: "2024-10-07T08:00:00",
-    end: "2024-10-07T08:45:00",
+    start: "2024-10-13T08:00:00",
+    end: "2024-10-13T08:45:00",
   },
   {
     title: "English",
-    start: "2024-10-07T09:00:00",
-    end: "2024-10-07T09:45:00",
+    start: "2024-10-13T09:00:00",
+    end: "2024-10-13T09:45:00",
   },
   {
     title: "Biology",
-    start: "2024-10-07T10:00:00",
-    end: "2024-10-07T10:45:00",
+    start: "2024-10-13T10:00:00",
+    end: "2024-10-13T10:45:00",
   },
   {
     title: "Physics",
-    start: "2024-10-07T11:00:00",
-    end: "2024-10-07T11:45:00",
+    start: "2024-10-13T11:00:00",
+    end: "2024-10-13T11:45:00",
   },
   {
     title: "Chemistry",
-    start: "2024-10-07T13:00:00",
-    end: "2024-10-07T13:45:00",
+    start: "2024-10-13T13:00:00",
+    end: "2024-10-13T13:45:00",
   },
   {
     title: "History",
-    start: "2024-10-07T14:00:00",
-    end: "2024-10-07T14:45:00",
+    start: "2024-10-13T14:00:00",
+    end: "2024-10-13T14:45:00",
   },
   {
     title: "English",
-    start: "2024-10-08T09:00:00",
-    end: "2024-10-08T09:45:00",
+    start: "2024-10-14T09:00:00",
+    end: "2024-10-14T09:45:00",
   },
   {
     title: "Biology",
-    start: "2024-10-08T10:00:00",
-    end: "2024-10-08T10:45:00",
+    start: "2024-10-14T10:00:00",
+    end: "2024-10-14T10:45:00",
   },
   {
     title: "Physics",
-    start: "2024-10-08T11:00:00",
-    end: "2024-10-08T11:45:00",
+    start: "2024-10-14T11:00:00",
+    end: "2024-10-14T11:45:00",
   },
 
   {
     title: "History",
-    start: "2024-10-08T14:00:00",
-    end: "2024-10-08T14:45:00",
+    start: "2024-10-14T14:00:00",
+    end: "2024-10-14T14:45:00",
   },
   {
     title: "Math",
-    start: "2024-10-09T08:00:00",
-    end: "2024-10-09T08:45:00",
+    start: "2024-10-15T08:00:00",
+    end: "2024-10-15T08:45:00",
   },
   {
     title: "Biology",
-    start: "2024-10-09T10:00:00",
-    end: "2024-10-09T10:45:00",
+    start: "2024-10-15T10:00:00",
+    end: "2024-10-15T10:45:00",
   },
 
   {
     title: "Chemistry",
-    start: "2024-10-09T13:00:00",
-    end: "2024-10-09T13:45:00",
+    start: "2024-10-15T13:00:00",
+    end: "2024-10-15T13:45:00",
   },
   {
     title: "History",
-    start: "2024-10-09T14:00:00",
-    end: "2024-10-09T14:45:00",
+    start: "2024-10-15T14:00:00",
+    end: "2024-10-15T14:45:00",
   },
   {
     title: "English",
-    start: "2024-10-10T09:00:00",
-    end: "2024-10-10T09:45:00",
+    start: "2024-10-16T09:00:00",
+    end: "2024-10-16T09:45:00",
   },
   {
     title: "Biology",
-    start: "2024-10-10T10:00:00",
-    end: "2024-10-10T10:45:00",
+    start: "2024-10-16T10:00:00",
+    end: "2024-10-16T10:45:00",
   },
   {
     title: "Physics",
-    start: "2024-10-10T11:00:00",
-    end: "2024-10-10T11:45:00",
+    start: "2024-10-16T11:00:00",
+    end: "2024-10-16T11:45:00",
   },
 
   {
     title: "History",
-    start: "2024-10-10T14:00:00",
-    end: "2024-10-10T14:45:00",
+    start: "2024-10-16T14:00:00",
+    end: "2024-10-16T14:45:00",
   },
   {
     title: "Math",
-    start: "2024-10-11T08:00:00",
-    end: "2024-10-11T08:45:00",
+    start: "2024-10-17T08:00:00",
+    end: "2024-10-17T08:45:00",
   },
   {
     title: "English",
-    start: "2024-10-11T09:00:00",
-    end: "2024-10-11T09:45:00",
+    start: "2024-10-17T09:00:00",
+    end: "2024-10-17T09:45:00",
   },
 
   {
     title: "Physics",
-    start: "2024-10-11T11:00:00",
-    end: "2024-10-11T11:45:00",
+    start: "2024-10-17T11:00:00",
+    end: "2024-10-17T11:45:00",
   },
   {
     title: "Chemistry",
-    start: "2024-10-11T13:00:00",
-    end: "2024-10-11T13:45:00",
+    start: "2024-10-17T13:00:00",
+    end: "2024-10-17T13:45:00",
   },
   {
     title: "History",
-    start: "2024-10-11T14:00:00",
-    end: "2024-10-11T14:45:00",
+    start: "2024-10-17T14:00:00",
+    end: "2024-10-17T14:45:00",
   },
 ];
