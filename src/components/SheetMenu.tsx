@@ -22,7 +22,7 @@ const SheetMenu = () => {
                 <SheetHeader>
                     <SheetTitle className='flex items-center justify-start'>
                         <Link href="/" className="flex items-end justify-center lg:justify-start gap-2">
-                            <Image src="/logo.png" alt="logo" width={28} height={28} priority />
+                            <Image src="/logo.png" alt="logo" width={26} height={26} priority />
                             <span className="block font-bold text-blue-900 text-sm">RZ School</span>
                         </Link>
                     </SheetTitle>

@@ -19,7 +19,7 @@ const data = [
     {
         name: 'Wed',
         present: 1000,
-        absent: 344,
+        absent: 345,
     },
     {
         name: 'Thu',

@@ -59,7 +59,7 @@ export const announcementsData = [
         id: 10,
         title: "About 1C Math Test",
         class: "1C",
-        date: "2025-01-01",
+        date: "2025-01-02",
     },
 ];
 
