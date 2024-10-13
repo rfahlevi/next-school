@@ -9,7 +9,7 @@ import { menuItems, role } from '@/lib/data'
 const SheetMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
 
-    const handleMenuClick = ({index}: {index: number}) => {
+    const handleMenuClick = () => {
         setIsOpen(false);  // Close the sheet
     };
 
@@ -33,7 +33,7 @@ const SheetMenu = () => {
                                     {menu.items.map((item, i) => {
                                         if (item.visible.includes(role)) {
                                             return (
-                                                <Link href={item.href} onClick={() => handleMenuClick({index: i})} className={`flex gap-x-2   hover:ease-in p-2 rounded-md font-medium  hover:font-bold hover:transition-all hover:duration-200 items-center justify-center lg:justify-start py-1 ${item.label === 'Logout' ? 'text-red-500 hover:bg-red-100' : 'text-gray-500 hover:bg-blue-100 hover:text-blue-700'}`} key={item.label}>
+                                                <Link href={item.href} onClick={handleMenuClick} className={`flex gap-x-2   hover:ease-in p-2 rounded-md font-medium  hover:font-bold hover:transition-all hover:duration-200 items-center justify-center lg:justify-start py-1 ${item.label === 'Logout' ? 'text-red-500 hover:bg-red-100' : 'text-gray-500 hover:bg-blue-100 hover:text-blue-700'}`} key={item.label}>
                                                     <Image src={item.icon} alt="" width={20} height={20} />
                                                     <span className="text-xs">{item.label}</span>
                                                 </Link>
