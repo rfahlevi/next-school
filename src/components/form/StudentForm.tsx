@@ -58,7 +58,7 @@ const StudentForm = ({ type, data }: {
     })
 
     return (
-        <form className="flex flex-col gap-4" onSubmit={onSubmit}>
+        <form className="flex flex-col gap-4 max-h-[calc(100vh-5rem)] overflow-auto" onSubmit={onSubmit}>
             <h1 className="text-lg font-semibold">{ `${ type === 'create'? 'Create a new student' : 'Update student' }` }</h1>
             <div className="flex flex-col gap-2">
                 <span className="text-xs text-gray-400 font-medium border-b pb-1">Authentication Information</span>
@@ -135,7 +135,7 @@ const StudentForm = ({ type, data }: {
                     <div className="flex flex-col gap-2 w-full md:w-[calc(33.33%-1rem)]">
                         <div className="flex flex-col gap-1">
                             <label className="text-xs text-gray-500">Sex</label>
-                            <select className="ring-[1px] ring-slate-300 p-2 rounded-md text-sm w-full">
+                            <select className="border border-slate-300 h-10 p-2 rounded-md text-sm w-full">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select>
